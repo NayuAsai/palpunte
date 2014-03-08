@@ -15,6 +15,6 @@ palpunte
 
 - JDK : 1.7.0_51
 - Groovy : 2.2.2
-- Grals : 2.3.7
+- Grails : 2.3.7
 - Eclipse : 4.3.1
 - GGTS : 3.4.0.RELEASE
