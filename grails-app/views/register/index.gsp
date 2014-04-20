@@ -3,9 +3,9 @@
 <html lang="ja">
 <head>
 	<meta charset="utf-8">
-	<r:require modules="bootstrap" />
 	<meta name="layout" content="main" />
-	<title>バグ登録 - Palpunte</title>
+	<title>バグ登録</title>
+
 </head>
 <body>
 	<h2>バグ登録</h2>
@@ -14,7 +14,7 @@
 
 	<div id="bug_info" class="panel panel-default">
 		<div class="panel-heading">
-			<h3 class="panel-title">バグ情報</h3>
+			<h3 class="panel-title"><b>バグ情報</b></h3>
 		</div>
 		<div class="panel-body">
 			<table class="table">
@@ -22,66 +22,35 @@
 					<td class="col-md-2 info">管理ID</td>
 					<td class="col-md-3" colspan="2">
 						<div class="btn-group">
-							<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-								プロジェクト名<span class="caret"></span>
-							</button>
-							<ul class="dropdown-menu" role="menu">
-								<li><a href="#"></a></li>
-								<li><a href="#">Palpunte</a></li>
-								<li><a href="#">パルプンテ</a></li>
-								<li><a href="#">Jenga</a></li>
-								<li class="divider"></li>
-								<li><a href="#">Other</a></li>
-							</ul>
+							<select class="form-control">
+								<option value='' disabled selected style='display:none;'>プロジェクト名</option>
+								<option>Palpunte</option>
+								<option>パルプンテ</option>
+								<option>Jenga</option>
+								<option>White Box</option>
+								<option>その他</option>
+							</select>
 						</div>　-　
 						<div class="btn-group">
-							<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-								バージョン<span class="caret"></span>
-							</button>
-							<ul class="dropdown-menu" role="menu">
-								<li><a href="#">Phase3</a></li>
-								<li><a href="#">Phase2</a></li>
-								<li><a href="#">Phase1</a></li>
-								<li class="divider"></li>
-								<li><a href="#">Other</a></li>
-								<li><a href="#">Other</a></li><li><a href="#">Other</a></li><li><a href="#">Other</a></li><li><a href="#">Other</a></li><li><a href="#">Other</a></li><li><a href="#">Other</a></li><li><a href="#">Other</a></li><li><a href="#">Other</a></li><li><a href="#">Other</a></li><li><a href="#">Other</a></li><li><a href="#">Other</a></li><li><a href="#">Other</a></li><li><a href="#">Other</a></li><li><a href="#">Other</a></li><li><a href="#">Other</a></li><li><a href="#">Other</a></li><li><a href="#">Other</a></li><li><a href="#">Other</a></li><li><a href="#">Other</a></li><li><a href="#">Other</a></li><li><a href="#">Other</a></li><li><a href="#">Other</a></li><li><a href="#">Other</a></li><li><a href="#">Other</a></li><li><a href="#">Other</a></li><li><a href="#">Other</a></li><li><a href="#">Other</a></li><li><a href="#">Other</a></li><li><a href="#">Other</a></li><li><a href="#">Other</a></li><li><a href="#">Other</a></li><li><a href="#">Other</a></li><li><a href="#">Other</a></li><li><a href="#">Other</a></li><li><a href="#">Other</a></li><li><a href="#">Other</a></li><li><a href="#">Other</a></li><li><a href="#">Other</a></li><li><a href="#">Other</a></li><li><a href="#">Other</a></li><li><a href="#">Other</a></li><li><a href="#">Other</a></li><li><a href="#">Other</a></li><li><a href="#">Other</a></li><li><a href="#">Other</a></li><li><a href="#">Other</a></li><li><a href="#">Other</a></li><li><a href="#">Other</a></li><li><a href="#">Other</a></li><li><a href="#">Other</a></li><li><a href="#">Other</a></li><li><a href="#">Other</a></li>
-							</ul>
+							<select class="form-control">
+								<option value='' disabled selected style='display:none;'>バージョン</option>
+								<option>Phase3</option>
+								<option>Phase2</option>
+								<option>Phase1</option>
+								<option>Other</option>
+								<option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option>
+							</select>
 						</div>　-　
 						<div class="btn-group">
-							<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-								工程<span class="caret"></span>
-							</button>
-							<ul class="dropdown-menu" role="menu">
-								<li><a href="#">UT</a></li>
-								<li><a href="#">SI1</a></li>
-								<li><a href="#">SI2</a></li>
-								<li><a href="#">商用</a></li>
-							</ul>
+							<select class="form-control">
+								<option value='' disabled selected style='display:none;'>工程</option>
+								<option>UT</option>
+								<option>SI1</option>
+								<option>SI2</option>
+								<option>SI3</option>
+								<option>商用</option>
+							</select>
 						</div>　-　 <span style="font-size: 24px;">00000</span>
-					</td>
-				</tr>
-				<tr class="">
-					<td class="col-md-2 info">ステータス</td>
-					<td class="col-md-3">未対応</td>
-					<td class="col-md-2 info">重要度</td>
-					<td class="col-md-3">最優先</td>
-				</tr>
-				<tr class="">
-					<td class="col-md-2 info">機能</td>
-					<td class="col-md-3">絵を描くということ</td>
-					<td class="col-md-2 info">登録日</td>
-					<td class="col-md-3">
-						<div class="">
-							<div class="input-group input-group-sm">
-								<input type="text" class="form-control" value="2014/03/15 17:00">
-								<span class="input-group-btn">
-									<button class="btn btn-default" type="button">Cal</button>
-								</span>
-							</div>
-							<!-- /input-group -->
-						</div>
-						<!-- /.col-lg-6 -->
-
 					</td>
 				</tr>
 				<tr class="">
@@ -93,22 +62,83 @@
 				<tr class="">
 					<td class="col-md-2 info">内容</td>
 					<td class="col-md-10" colspan="3">
-						<textarea class="form-control" style="resize: vertical;" rows="3">
-気付いたら3月だった、どうにかしてほしい
-コミティア終わってもう1ヶ月経ってるとか信じられない。
-きっと長い夢を見てるはずなので、寝てるやつをたたき起こしてほしい。
-						</textarea>
+						<textarea class="form-control" style="resize: vertical;" rows="3"></textarea>
+					</td>
+				</tr>
+				<tr class="">
+					<td class="col-md-2 info">ステータス</td>
+					<td class="col-md-3">
+						<select class="form-control">
+							<option>未対応</option>
+							<option></option>
+							<option></option>
+							<option></option>
+							<option></option>
+							<option></option>
+							<option></option>
+							<option></option>
+						</select>
+					</td>
+					<td class="col-md-2 info">重要度</td>
+					<td class="col-md-3">
+						<select class="form-control">
+							<option>最優先</option>
+							<option>緊急</option>
+							<option selected>通常</option>
+							<option>不急</option>
+						</select>
+					</td>
+				</tr>
+				<tr class="">
+					<td class="col-md-2 info">チーム名</td>
+					<td class="col-md-3">
+						<div class="">
+							<div class="input-group input-group-sm">
+								<input type="text" class="form-control" value="White Box技術部">
+								<span class="input-group-btn">
+									<button class="btn btn-default" type="button">Tm</button>
+								</span>
+							</div>
+						</div>
+					</td>
+					<td class="col-md-2 info">APバージョン（任意）</td>
+					<td class="col-md-3">
+						<input class="form-control" type="text" placeholder="発見日から自動入力できたらかっこいい">
+					</td>
+				</tr>
+				<tr class="">
+					<td class="col-md-2 info">機能</td>
+					<td class="col-md-3">
+						<div class="">
+							<div class="input-group input-group-sm">
+								<input type="text" class="form-control" value="絵を描くということ">
+								<span class="input-group-btn">
+									<button class="btn btn-default" type="button">Func</button>
+								</span>
+							</div>
+						</div>
+					</td>
+					<td class="col-md-2 info">バグ発見日</td>
+					<td class="col-md-3">
+						<div class="">
+							<div class="input-group input-group-sm">
+								<input type="text" class="form-control" value="2014/03/15 17:00">
+								<span class="input-group-btn">
+									<button class="btn btn-default" type="button">Cal</button>
+								</span>
+							</div>
+						</div>
 					</td>
 				</tr>
 			</table>
 		</div>
 	</div>
-	<div class="checkbox col-md-3 col-md-offset-0">
-		<label> <input type="checkbox"> メール送信
-		</label>
+	<div class="checkbox col-md-5 col-md-offset-0">
+		<label><input type="checkbox"> メール送信</label>
+		<span>（いつ送信したかをステータスと一緒に表示する）</span>
 	</div>
 	<div class="col-md-offset-11">
-		<button type="submit" class="btn btn-primary btn-lg">保存</button>
+		<button type="submit" class="btn btn-primary btn-lg"><b>保存</b></button>
 	</div>
 	<br>
 

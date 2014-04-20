@@ -6,7 +6,9 @@
 
 	<link rel="stylesheet"
 		href="${resource(dir: 'css', file: 'navbar.css')}" type="text/css">
+	<g:javascript library="jquery"/>
 	<r:require modules="bootstrap" />
+	<g:javascript library="application" />
 
 	<title><g:layoutTitle default="Palpunte"/></title>
 	<r:layoutResources />
@@ -25,13 +27,13 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="#"><span class="glyphicon glyphicon-certificate"></span> パルプンテ</a>
+				<a class="navbar-brand" href="../search/"><span class="glyphicon glyphicon-certificate"></span> PALPUNTE</a>
 			</div>
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav">
 					<li class="active"><a href="#">Link</a></li>
 					<li><a href="#">Link</a></li>
-					<li><a href="#">Link</a></li>
+					<li><a href="#">Help</a></li>
 					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
 						<ul class="dropdown-menu">
 							<li><a href="#">Action</a></li>
@@ -45,9 +47,9 @@
 					</li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
-					<li class="active"><a href="./">Default</a></li>
-					<li><a href="../navbar-static-top/">Static top</a></li>
-					<li><a href="../navbar-fixed-top/">Fixed top</a></li>
+					<li class="active"><a href="../search/">バグ検索</a></li>
+					<li><a href="../register/">新規バグ登録</a></li>
+					<li>　　</li><!-- TODO:位置調整なので後でCSSに変える -->
 				</ul>
 			</div>
 			<!--/.nav-collapse -->
