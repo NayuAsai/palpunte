@@ -52,7 +52,7 @@
 								<option>RT</option>
 								<option>商用</option>
 							</select>
-						</div>
+						</div>　-　 <span style="font-size: 24px;">00000</span>
 					</td>
 				</tr>
 				<tr class="">
@@ -92,17 +92,6 @@
 					</td>
 				</tr>
 				<tr class="">
-					<td class="col-md-2 info">機能</td>
-					<td class="col-md-3">
-						<div class="">
-							<div class="input-group input-group-sm">
-								<input type="text" class="form-control" value="絵を描くということ">
-								<span class="input-group-btn">
-									<button class="btn btn-default" type="button">Func</button>
-								</span>
-							</div>
-						</div>
-					</td>
 					<td class="col-md-2 info">チーム名</td>
 					<td class="col-md-3">
 						<div class="">
@@ -114,8 +103,23 @@
 							</div>
 						</div>
 					</td>
+					<td class="col-md-2 info">APバージョン（任意）</td>
+					<td class="col-md-3">
+						<input class="form-control" type="text" placeholder="発見日から自動入力できたらかっこいい">
+					</td>
 				</tr>
 				<tr class="">
+					<td class="col-md-2 info">機能</td>
+					<td class="col-md-3">
+						<div class="">
+							<div class="input-group input-group-sm">
+								<input type="text" class="form-control" value="絵を描くということ">
+								<span class="input-group-btn">
+									<button class="btn btn-default" type="button">Func</button>
+								</span>
+							</div>
+						</div>
+					</td>
 					<td class="col-md-2 info">バグ発見日</td>
 					<td class="col-md-3">
 						<div class="">
@@ -127,24 +131,15 @@
 							</div>
 						</div>
 					</td>
-					<td class="col-md-2 info">APバージョン（任意）</td>
-					<td class="col-md-3">
-						<input type="text" class="form-control" placeholder="発見日から自動入力できたらかっこいい">
-					</td>
 				</tr>
 				<tr class="">
-					<td class="col-md-2 info">試験項目</td>
-					<td class="col-md-10" colspan="3">
-						<input class="form-control" type="text">
-					</td>
-				</tr>				<tr class="">
-					<td class="col-md-2 info">登録者</td>
+					<td class="col-md-2 info">機能</td>
 					<td class="col-md-3">
 						<div class="">
 							<div class="input-group input-group-sm">
-								<input type="text" class="form-control">
+								<input type="text" class="form-control" value="絵を描くということ">
 								<span class="input-group-btn">
-									<button class="btn btn-default" type="button">User</button>
+									<button class="btn btn-default" type="button">Func</button>
 								</span>
 							</div>
 						</div>
@@ -172,38 +167,49 @@
 		<button type="submit" class="btn btn-primary btn-lg"><b>保存</b></button>
 	</div>
 	<br>
-<!-- 解析 -->
+
 	<div id="bug_analyze" class="panel panel-default">
 		<div class="panel-heading"><h3 class="panel-title">解析</h3></div>
 		<div class="panel-body">
+			<div class="row show-grid">
+				<div class="col-md-2">管理ID</div>
+				<div class="col-md-3 col-md-pull-9">.col-md-3 .col-md-pull-9</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4">.col-md-4</div>
+				<div class="col-md-4 col-md-offset-4">.col-md-4
+					.col-md-offset-4</div>
+			</div>
+			<div class="row">
+				<div class="col-md-3 col-md-offset-3">.col-md-3
+					.col-md-offset-3</div>
+				<div class="col-md-3 col-md-offset-3">.col-md-3
+					.col-md-offset-3</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6 col-md-offset-3">.col-md-6
+					.col-md-offset-3</div>
+			</div>
+
 			<table class="table">
 				<tr class="">
-					<td class="col-md-2 info">解析内容</td>
-					<td class="col-md-10" colspan="3">
-						<textarea class="form-control" style="resize: vertical;" rows="3"></textarea>
-					</td>
+					<td class="col-md-2 info">管理ID</td>
+					<td class="col-md-3">Palpunte - Phase1 - SI1 - XXXXX</td>
 				</tr>
 				<tr class="">
-					<td class="col-md-2 info">解析者</td>
-					<td class="col-md-3">
-						<input type="text" class="form-control">
-					</td>
-					<td class="col-md-2 info">解析日</td>
-					<td class="col-md-3">
-						<div class="">
-							<div class="input-group input-group-sm">
-								<input type="text" class="form-control" value="2014/03/15 17:00">
-								<span class="input-group-btn">
-									<button class="btn btn-default" type="button">Cal</button>
-								</span>
-							</div>
-						</div>
-					</td>
+					<td class="col-md-2 info">管理ID</td>
+					<td class="col-md-3">管理ID</td>
+					<td class="col-md-2 info">管理ID</td>
+					<td class="col-md-3">管理ID</td>
+				</tr>
+				<tr class="">
+					<td class="col-md-2 info">タイトル</td>
+					<td class="col-md-10" colspan="3">なんかうまく動かないのでいい感じに直してほしい</td>
 				</tr>
 			</table>
 		</div>
 	</div>
-<!-- 対応 -->
+
 	<div id="bug_commit" class="panel panel-default">
 		<div class="panel-heading">
 			<h3 class="panel-title">対応</h3>
@@ -211,46 +217,30 @@
 		<div class="panel-body">
 			<table class="table">
 				<tr class="">
-					<td class="col-md-2 info">対応内容</td>
-					<td class="col-md-10" colspan="3">
-						<textarea class="form-control" style="resize: vertical;" rows="3"></textarea>
-					</td>
+					<td class="col-md-2 info">管理ID</td>
+					<td class="col-md-3">Palpunte - Phase1 - SI1 - XXXXX</td>
 				</tr>
 				<tr class="">
-					<td class="col-md-2 info">対応者</td>
-					<td class="col-md-3">
-						<input type="text" class="form-control">
-					</td>
-					<td class="col-md-2 info">対応日</td>
-					<td class="col-md-3">
-						<div class="">
-							<div class="input-group input-group-sm">
-								<input type="text" class="form-control" value="2014/03/15 17:00">
-								<span class="input-group-btn">
-									<button class="btn btn-default" type="button">Cal</button>
-								</span>
-							</div>
-						</div>
+					<td class="col-md-2 info">ステータス</td>
+					<td class="col-md-3">未対応</td>
+					<td class="col-md-2 info">重要度</td>
+					<td class="col-md-3">通常</td>
+				</tr>
+				<tr class="">
+					<td class="col-md-2 info">タイトル</td>
+					<td class="col-md-10" colspan="3">なんかうまく動かないのでいい感じに直してほしい</td>
+				</tr>
+				<tr class="">
+					<td class="col-md-2 info">内容</td>
+					<td class="col-md-10" colspan="3">
+					気付いたら3月だった、どうにかしてほしい<br>
+					コミティア終わってもう1ヶ月経ってるとか信じられない。<br>
+					きっと長い夢を見てるはずなので、寝てるやつをたたき起こしてほしい。<br>
 					</td>
 				</tr>
 			</table>
 		</div>
 	</div>
-
-	<table class="table">
-		<tr class="">
-			<td class="col-md-2 info">登録日</td>
-			<td class="col-md-3">
-				<div class="">
-				</div>
-			</td>
-			<td class="col-md-2 info">更新日</td>
-			<td class="col-md-3">
-				<div class="">
-				</div>
-			</td>
-		</tr>
-	</table>
 </div>
 
 </body>
