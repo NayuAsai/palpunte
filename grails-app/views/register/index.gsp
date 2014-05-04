@@ -8,6 +8,8 @@
 
 </head>
 <body>
+<g:form controller="register">
+
 	<h2>バグ登録</h2>
 
 <div class="row">
@@ -20,37 +22,29 @@
 			<table class="table">
 				<tr class="">
 					<td class="col-md-2 info">管理ID</td>
-					<td class="col-md-3" colspan="2">
+					<td class="col-md-10" colspan="3">
 						<div class="btn-group">
-							<select class="form-control">
-								<option value='' disabled selected style='display:none;'>プロジェクト名</option>
-								<option>Palpunte</option>
-								<option>パルプンテ</option>
-								<option>Jenga</option>
-								<option>White Box</option>
-								<option>その他</option>
+							<select name="bugIdProject" class="form-control">
+								<option value='' disabled selected style='display: none;'>プロジェクト名</option>
+							<g:each in="${application.projects}">
+								<option value="${it.value}">${it.value}</option>
+							</g:each>
 							</select>
 						</div>　-　
 						<div class="btn-group">
-							<select class="form-control">
-								<option value='' disabled selected style='display:none;'>バージョン</option>
-								<option>Phase3</option>
-								<option>Phase2</option>
-								<option>Phase1</option>
-								<option>Other</option>
-								<option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option><option>Other</option>
+							<select name="bugIdPhase" class="form-control">
+								<option value='' disabled selected style='display:none;'>開発バージョン</option>
+							<g:each in="${application.phases}">
+								<option value="${it.value}">${it.value}</option>
+							</g:each>
 							</select>
 						</div>　-　
 						<div class="btn-group">
-							<select class="form-control">
+							<select name="bugIdProcess" class="form-control">
 								<option value='' disabled selected style='display:none;'>工程</option>
-								<option>UT</option>
-								<option>SI1</option>
-								<option>SI2</option>
-								<option>SI3</option>
-								<option>PT</option>
-								<option>RT</option>
-								<option>商用</option>
+							<g:each in="${application.processes}">
+								<option value="${it.value}">${it.value}</option>
+							</g:each>
 							</select>
 						</div>
 					</td>
@@ -58,13 +52,13 @@
 				<tr class="">
 					<td class="col-md-2 info">タイトル</td>
 					<td class="col-md-10" colspan="3">
-						<input class="form-control" type="text" placeholder="なんかうまく動かないのでいい感じに直してほしい">
+						<g:textField name="title" value="${bug.title}" class="form-control" placeholder="バグの簡単な内容を入力してください" />
 					</td>
 				</tr>
 				<tr class="">
 					<td class="col-md-2 info">内容</td>
 					<td class="col-md-10" colspan="3">
-						<textarea class="form-control" style="resize: vertical;" rows="3"></textarea>
+						<textarea class="form-control" style="resize: vertical;" rows="3" placeholder="バグの詳細な内容を入力してください"></textarea>
 					</td>
 				</tr>
 				<tr class="">
@@ -133,7 +127,7 @@
 					</td>
 				</tr>
 				<tr class="">
-					<td class="col-md-2 info">試験項目</td>
+					<td class="col-md-2 info">試験項目（任意）</td>
 					<td class="col-md-10" colspan="3">
 						<input class="form-control" type="text">
 					</td>
@@ -169,7 +163,7 @@
 		<span>（いつ送信したかをステータスと一緒に表示する）</span>
 	</div>
 	<div class="col-md-offset-11">
-		<button type="submit" class="btn btn-primary btn-lg"><b>保存</b></button>
+		<g:actionSubmit value="保存" class="btn btn-primary btn-lg" action="save" style="font-weight: bold;"/>
 	</div>
 	<br>
 <!-- 解析 -->
@@ -239,6 +233,13 @@
 
 	<table class="table">
 		<tr class="">
+			<td class="col-md-2 info">備考</td>
+			<td class="col-md-10" colspan="3">
+				<textarea class="form-control" style="resize: vertical;" rows="3"></textarea>
+			</td>
+		</tr>
+		<tr><td></td></tr>
+		<tr class="">
 			<td class="col-md-2 info">登録日</td>
 			<td class="col-md-3">
 				<div class="">
@@ -252,6 +253,6 @@
 		</tr>
 	</table>
 </div>
-
+</g:form>
 </body>
 </html>

@@ -1,4 +1,4 @@
-package palpunte
+package white.box.palpunte
 
 import grails.test.mixin.TestFor
 import spock.lang.Specification

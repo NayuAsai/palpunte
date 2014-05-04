@@ -1,5 +1,8 @@
 package white.box.palpunte.bug
 
+import white.box.palpunte.Bug
+import white.box.palpunte.CodeMst
+
 /**
  * バグ登録画面を表示するController
  *
@@ -23,7 +26,19 @@ class RegisterController {
      */
     def index() {
 
+		// TODO:ここは登録だからいいけど、編集はIDでDBから値引っ張ってこないとダメ
+		def bug = Bug.get(1)
+		if (bug == null) {
+			bug = new Bug()
+			bug.setTitle("テストタイトル")
+		}
 
+		// TODO:初期値設定処理を追加する
+
+
+//		[bug: new Bug()]
+//		[bug: bug, projects: CodeMst.findAllByCodename("C0001")]
+		[bug: bug]
 	}
 
 	/**
@@ -32,6 +47,17 @@ class RegisterController {
 	 * @return 参照画面（に行きたいけど、とりあえず編集画面を再描画）
 	 */
 	def save() {
+		println "save"	// TODO:log出力に変更する
 
+		def bug = new Bug(params)
+		// IDで検索かけてカウント+1
+		int count = Bug.countByBugIdProjectAndBugIdPhaseAndBugIdProcess(
+			bug.bugIdProject, bug.bugIdPhase, bug.bugIdProcess)
+		bug.bugIdNo = count + 1
+		bug.save()
+
+		redirect(action: 'index')
+//		redirect(action: 'index', params: [saveflag: true])	// これでも↓と同じ動作になるが、index()が実行される分違うかも
+//		render(view: 'index')	// 自画面遷移（何もしないとsave.jspに遷移しようとするので）
 	}
 }

@@ -1,4 +1,4 @@
-package palpunte
+package white.box.palpunte
 
 /**
  * バグ情報として管理する項目
@@ -13,21 +13,27 @@ class Bug {
 	String bugIdProcess
 	String bugIdNo
 
-	// ステータス
-	String status
-	// 優先度
-	String priority
-	// タグ
+	// TODO:タグ
 	String tags
 
 	// タイトル
 	String title
 	// バグ内容
 	String bugInfo
-	// 登録日
-	Date createdate
-	// 登録者
-	String creater
+	// ステータス
+	String status
+	// 重要度
+	String priority
+	// 機能
+	String function
+	// チーム名
+	String team
+	// バグ発見日
+	Date finddate
+	// APバージョン
+	String apVersion
+	// 試験項目
+	String pcl
 
 	// 解析結果
 	String analyzeInfo
@@ -48,6 +54,12 @@ class Bug {
 	// 横展開結果
 	String spreadChangesInfo
 
+	// 備考
+	String note
+	// 登録日
+	Date createdate
+	// 登録者
+	String creater
 	// 更新日
 	Date updatedate
 	// 更新者
@@ -63,23 +75,36 @@ class Bug {
 		bugIdPhase nullable: true
 		bugIdProcess nullable: true
 		bugIdNo nullable: true
-		status nullable: true
-		priority nullable: true
+
 		tags nullable: true
+
 		title nullable: true
 		bugInfo nullable: true
-		createdate nullable: true
-		creater nullable: true
+		status nullable: true
+		priority nullable: true
+		function nullable: true
+		team nullable: true
+		finddate nullable: true
+		apVersion nullable: true
+		pcl nullable: true
+
 		analyzeInfo nullable: true
 		analyzer nullable: true
 		analyzedate nullable: true
+
 		commitInfo nullable: true
 		commiter nullable: true
 		commitdate nullable: true
+
 		spreadChanges nullable: true
 		spreadChangesInfo nullable: true
+
+		note nullable: true
+		createdate nullable: true
+		creater nullable: true
 		updatedate nullable: true
 		updater nullable: true
+
 		extendInfo nullable: true
 
 	}
