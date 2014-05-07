@@ -26,19 +26,41 @@ class RegisterController {
      */
     def index() {
 
-		// TODO:ここは登録だからいいけど、編集はIDでDBから値引っ張ってこないとダメ
-		def bug = Bug.get(1)
-		if (bug == null) {
-			bug = new Bug()
-			bug.setTitle("テストタイトル")
-		}
+		// TODO:ユーザ情報の定義が必要。あと取得も。
+		// 基本セッションの情報を使って、使えなければDBから引いてくる。
 
-		// TODO:初期値設定処理を追加する
+		// バグ情報を作成し、初期値を設定
+		def bug = new Bug()
+		init(bug, null)
+
+
+
+
+//		// TODO:ここは登録だからいいけど、編集はIDでDBから値引っ張ってこないとダメ
+//		def bug = Bug.get(1)
+//		if (bug == null) {
+//			bug = new Bug()
+//			bug.setTitle("テストタイトル")
+//		}
 
 
 //		[bug: new Bug()]
 //		[bug: bug, projects: CodeMst.findAllByCodename("C0001")]
+
+		// 再描画については悩ましいが、いったん保留。
+		// 続けて入力ボタンとかもいるかもしれない。その場合、前回の入力を割と引き継ぐとか。
 		[bug: bug]
+	}
+
+	/**
+	 * 初期値設定用
+	 * @param bug 設定するバグ情報
+	 * @param userInfo ユーザ情報。ユーザ独自の初期設定がある場合はこれを利用する。
+	 */
+	void init(bug, userInfo) {
+
+
+
 	}
 
 	/**

@@ -64,25 +64,14 @@
 				<tr class="">
 					<td class="col-md-2 info">ステータス</td>
 					<td class="col-md-3">
-						<select class="form-control">
-							<option>未対応</option>
-							<option>再現待ち</option>
-							<option>解析済み</option>
-							<option>対応済み</option>
-							<option>完了</option>
-							<option>無効</option>
-							<option>対応なし</option>
-							<option>次回対応</option>
-						</select>
+						<g:select name="status" from="${application.status}" optionKey="value" optionValue="value" class="form-control" />
 					</td>
 					<td class="col-md-2 info">重要度</td>
 					<td class="col-md-3">
-						<select class="form-control">
-							<option>最優先</option>
-							<option>緊急</option>
-							<option selected>通常</option>
-							<option>不急</option>
-						</select>
+						<g:select
+							name="priority" from="${application.priority}"
+							value="通常"
+							optionKey="value" optionValue="value" class="form-control" />
 					</td>
 				</tr>
 				<tr class="">
@@ -90,7 +79,7 @@
 					<td class="col-md-3">
 						<div class="">
 							<div class="input-group input-group-sm">
-								<input type="text" class="form-control" value="絵を描くということ">
+								<g:textField name="function" value="${bug.function}" class="form-control" placeholder="" />
 								<span class="input-group-btn">
 									<button class="btn btn-default" type="button">Func</button>
 								</span>
@@ -101,7 +90,7 @@
 					<td class="col-md-3">
 						<div class="">
 							<div class="input-group input-group-sm">
-								<input type="text" class="form-control" value="White Box技術部">
+								<g:textField name="team" value="${bug.team}" class="form-control" placeholder="" />
 								<span class="input-group-btn">
 									<button class="btn btn-default" type="button">Tm</button>
 								</span>
@@ -114,7 +103,7 @@
 					<td class="col-md-3">
 						<div class="">
 							<div class="input-group input-group-sm">
-								<input type="text" class="form-control" value="2014/03/15 17:00">
+								<g:textField name="finddate" value="${bug.finddate}" class="form-control" placeholder="" />
 								<span class="input-group-btn">
 									<button class="btn btn-default" type="button">Cal</button>
 								</span>
@@ -123,33 +112,23 @@
 					</td>
 					<td class="col-md-2 info">APバージョン（任意）</td>
 					<td class="col-md-3">
-						<input type="text" class="form-control" placeholder="発見日から自動入力できたらかっこいい">
+						<g:textField name="apVersion" value="${bug.apVersion}" class="form-control" placeholder="" />
 					</td>
 				</tr>
 				<tr class="">
 					<td class="col-md-2 info">試験項目（任意）</td>
 					<td class="col-md-10" colspan="3">
-						<input class="form-control" type="text">
+						<g:textField name="pcl" value="${bug.pcl}" class="form-control" placeholder="" />
 					</td>
-				</tr>				<tr class="">
+				</tr>
+				<tr class="">
 					<td class="col-md-2 info">登録者</td>
 					<td class="col-md-3">
 						<div class="">
 							<div class="input-group input-group-sm">
-								<input type="text" class="form-control">
+								<g:textField name="creater" value="${bug.creater}" class="form-control" placeholder="" />
 								<span class="input-group-btn">
 									<button class="btn btn-default" type="button">User</button>
-								</span>
-							</div>
-						</div>
-					</td>
-					<td class="col-md-2 info">バグ発見日</td>
-					<td class="col-md-3">
-						<div class="">
-							<div class="input-group input-group-sm">
-								<input type="text" class="form-control" value="2014/03/15 17:00">
-								<span class="input-group-btn">
-									<button class="btn btn-default" type="button">Cal</button>
 								</span>
 							</div>
 						</div>
