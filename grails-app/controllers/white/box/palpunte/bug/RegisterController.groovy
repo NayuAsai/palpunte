@@ -58,9 +58,20 @@ class RegisterController {
 	 * @param userInfo ユーザ情報。ユーザ独自の初期設定がある場合はこれを利用する。
 	 */
 	void init(bug, userInfo) {
-
-
-
+//		def hoge = CodeMst.findAllByCodename("C0004", [sort:"key", order:"asc"]).collect {new CodeMst(value:it.value)}
+//
+//		println hoge[0].key
+//
+//		def c = CodeMst.createCriteria()
+//		def values = c.list {
+//			projections {
+//				property('value')
+//			}
+//			eq("codename", "C0004")
+//			order("key", "asc")
+//		}
+//
+//		println values
 	}
 
 	/**

@@ -52,7 +52,7 @@ class BootStrap {
 		servletContext.setAttribute("projects", CodeMst.findAllByCodename("C0001"))
 		servletContext.setAttribute("phases", CodeMst.findAllByCodename("C0002", [sort:"key", order:"desc"]))
 		servletContext.setAttribute("processes", CodeMst.findAllByCodename("C0003", [sort:"key", order:"asc"]))
-		servletContext.setAttribute("status", CodeMst.findAllByCodename("C0004", [sort:"key", order:"asc"]))
+		servletContext.setAttribute("status", CodeMst.findAllByCodename("C0004", [sort:"key", order:"asc"]).collect {new CodeMst(value:it.value)})
 		servletContext.setAttribute("priority", CodeMst.findAllByCodename("C0005", [sort:"key", order:"asc"]))
 
 	}
