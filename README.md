@@ -13,8 +13,8 @@ palpunte
 
 ### 開発環境
 
-- JDK : 1.7.0_51
-- Groovy : 2.2.2
-- Grails : 2.3.7
+- JDK : 1.8.0_5
+- Groovy : 2.3.4
+- Grails : 2.4.2
 - Eclipse : 4.3.1
-- GGTS : 3.4.0.RELEASE
+- GGTS : 3.6.0.RELEASE
