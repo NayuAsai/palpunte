@@ -48,8 +48,9 @@ grails.project.dependency.resolution = {
 
     dependencies {
         // specify dependencies here under either 'build', 'compile', 'runtime', 'test' or 'provided' scopes e.g.
-        // runtime 'mysql:mysql-connector-java:5.1.27'
-        // runtime 'org.postgresql:postgresql:9.3-1100-jdbc41'
+        // runtime 'mysql:mysql-connector-java:5.1.29'
+        // runtime 'org.postgresql:postgresql:9.3-1101-jdbc41'
+        test "org.grails:grails-datastore-test-support:1.0-grails-2.4"
     }
 
     plugins {
@@ -63,22 +64,19 @@ grails.project.dependency.resolution = {
 
         // plugins needed at runtime but not for compilation
         runtime ':hibernate4:4.3.5.4' // or ':hibernate:3.6.10.16'
-        runtime ":database-migration:1.3.8"
-        runtime ":jquery:1.11.0"
+        runtime ":database-migration:1.4.0"
+        runtime ":jquery:1.11.1"
         // Uncomment these (or add new ones) to enable additional resources capabilities
         //runtime ":zipped-resources:1.0.1"
         //runtime ":cached-resources:1.1"
         //runtime ":yui-minify-resources:0.1.5"
 
-		runtime ':twitter-bootstrap:3.1.1.3'
-
-        // An alternative to the default resources plugin is the asset-pipeline plugin
-        //compile ":asset-pipeline:1.5.0"
+		runtime ":twitter-bootstrap:3.2.1"
 
         // Uncomment these to enable additional asset-pipeline capabilities
-        //compile ":sass-asset-pipeline:1.5.1"
-        //compile ":less-asset-pipeline:1.5.0"
-        //compile ":coffee-asset-pipeline:1.5.0"
-        //compile ":handlebars-asset-pipeline:1.0.0.3"
+        //compile ":sass-asset-pipeline:1.7.4"
+        //compile ":less-asset-pipeline:1.7.0"
+        //compile ":coffee-asset-pipeline:1.7.0"
+        //compile ":handlebars-asset-pipeline:1.3.0.3"
     }
 }

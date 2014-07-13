@@ -4,14 +4,13 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<link rel="stylesheet"
-		href="${resource(dir: 'css', file: 'navbar.css')}" type="text/css">
-	<g:javascript library="jquery"/>
-	<r:require modules="bootstrap" />
-	<g:javascript library="application" />
+	<asset:stylesheet href="application.css"/>
+	<asset:stylesheet href="navbar.css"/>
+	
+	<asset:javascript src="application.js"/>
 
 	<title><g:layoutTitle default="Palpunte"/></title>
-	<r:layoutResources />
+	<g:layoutHead/>
 </head>
 <body>
 
@@ -27,12 +26,12 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="../search/"><span class="glyphicon glyphicon-certificate"></span> PALPUNTE</a>
+				<a class="navbar-brand" href="search"><span class="glyphicon glyphicon-certificate"></span> PALPUNTE</a>
 			</div>
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav navbar-right">
-					<li class="active"><a href="../search/">バグ検索</a></li>
-					<li><a href="../register/">新規バグ登録</a></li>
+					<li class="active"><a href="search">バグ検索</a></li>
+					<li><a href="register">新規バグ登録</a></li>
 					<li>　　</li><!-- TODO:位置調整なので後でCSSに変える -->
 				</ul>
 			</div>
@@ -43,8 +42,6 @@
 		<div>
 			<g:layoutBody />
 		</div>
-		<!-- /container -->
-		<r:layoutResources />
 	</div>
 </body>
 </html>
